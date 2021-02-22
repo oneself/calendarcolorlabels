@@ -1,2 +1,3 @@
 # calendarcolorlabels
-Add configurable labels to Google Calendar event colors
+
+Google Chrome extension to add configurable labels to Google Calendar event colors

@@ -1,0 +1,29 @@
+.circleBase {
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  border: 2px solid #000;
+  display: inline-block;
+}
+
+input[type=text] {
+  width: 150px;
+}
+
+body {
+  width: 500px;
+}
+
+.submit-btn {
+  width: 100%;
+  text-align: center;
+}
+
+.color-label {
+  width: 75px;
+  padding-left: 10px;
+  display: inline-block;
+}
+
+.color-option {
+}
