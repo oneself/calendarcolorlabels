@@ -2,7 +2,9 @@
 // Create an options page to set the labels for each color dot
 let page = document.getElementById("colors-form");
 
-// Function to handle saving the options
+/**
+ * Function to handle saving the options
+ */
 function handleOptionsSave(event) {
   // Initialize the colorLabels
   let colorLabels = {};
@@ -18,6 +20,9 @@ function handleOptionsSave(event) {
   chrome.storage.sync.set({ colorLabels }, () => { alert("Saved"); });
 }
 
+/**
+ * Function to add the color labels to the calendar page.
+ */
 function constructOptions(dotColors) {
   // Read labels from storage.
   chrome.storage.sync.get("colorLabels", ({ colorLabels }) => {

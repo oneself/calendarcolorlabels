@@ -1,4 +1,6 @@
-// Create a format function for nicer string templating
+/**
+ * Create a format function for nicer string templating
+ */
 if (!String.prototype.format) {
   String.prototype.format = function() {
     var args = arguments;
@@ -11,6 +13,9 @@ if (!String.prototype.format) {
   };
 }
 
+/**
+ * Called with calendar is loaded.  Used to add color labels.
+ */
 function onLoad() {
   // We need to keep running this since Google Calendar doesn't have clear page
   // loads that we can rely on the set color dot labels.

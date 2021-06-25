@@ -1,3 +1,4 @@
+// Map labels to color values
 const dotColors = {
   "Tomato": "#D50000",
   "Flamingo": "#E67C73",
