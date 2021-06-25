@@ -21,7 +21,7 @@ function handleOptionsSave(event) {
 }
 
 /**
- * Function to add the color labels to the calendar page.
+ * Construct the options page.
  */
 function constructOptions(dotColors) {
   // Read labels from storage.
