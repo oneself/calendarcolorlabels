@@ -34,6 +34,10 @@ function onLoad() {
             let dotName = colorLabels[color];
             // Make sure dotName is not an empty string.
             if (dotName) {
+              // It seems that there are slightly different versions of the Google Calendar site.
+              // Some use the "title" attribute while others use "dataset.text". We're setting both
+              // version and hopefully that willl work for everyone.
+              colorLabel.title = dotName;
               colorLabel.dataset.text = dotName;
             }
           }
