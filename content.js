@@ -34,7 +34,7 @@ function onLoad() {
             let dotName = colorLabels[color];
             // Make sure dotName is not an empty string.
             if (dotName) {
-              colorLabel.title = dotName;
+              colorLabel.dataset.text = dotName;
             }
           }
         }
