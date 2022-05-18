@@ -16,6 +16,7 @@ if (!String.prototype.format) {
 /**
  * Called with calendar is loaded.  Used to add color labels.
  */
+
 function onLoad() {
   // We need to keep running this since Google Calendar doesn't have clear page
   // loads that we can rely on the set color dot labels.
@@ -25,16 +26,20 @@ function onLoad() {
       // Only proceed if we have any defined.
       if (colorLabels) {
         for (var color in colorLabels) {
-          // Find each color based on the "data-text" attribute since that seems
-          // to be the only property that is not obfuscated.
-          let searchTerm = '[data-text="{0}"]'.format(color);
-          let colorLabel = document.querySelector(searchTerm);
-          // Make sure we found something
-          if (colorLabel) {
-            let dotName = colorLabels[color];
-            // Make sure dotName is not an empty string.
-            if (dotName) {
-              colorLabel.dataset.text = dotName;
+          var colorName = colorLabels[color][COLOR_NAME];
+          // If color name is defined
+          if (colorName) {
+            // Find each color based on the "data-text" attribute since that seems
+            // to be the only property that is not obfuscated.
+            let searchTerm = '[data-text="{0}"]'.format(colorName);
+            let colorHint = document.querySelector(searchTerm);
+            // Make sure we found something
+            if (colorHint) {
+              // Make sure dotName is not an empty string.
+              var colorText = colorLabels[color][COLOR_TEXT];
+              if (colorText) {
+                colorHint.dataset.text = colorText;
+              }
             }
           }
         }

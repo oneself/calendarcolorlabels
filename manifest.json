@@ -1,7 +1,7 @@
 {
   "name": "Calendar Color Labels",
   "description": "Add configurable labels to Google Calendar event colors",
-  "version": "0.3",
+  "version": "0.4",
   "manifest_version": 3,
   "permissions": ["storage"],
   "options_page": "options.html",

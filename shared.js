@@ -1,5 +1,5 @@
 // Map labels to color values
-const dotColors = {
+const DEFAULT_DOT_NAME_SCOLORS = {
   "Tomato": "#D50000",
   "Flamingo": "#E67C73",
   "Tangerine": "#F4511E",
@@ -10,5 +10,8 @@ const dotColors = {
   "Blueberry": "#3F51B5",
   "Lavender": "#7986CB",
   "Grape": "#8E24AA",
-  "Graphite": "#616161"
+  "Graphite": "#616161",
 };
+
+const COLOR_NAME = "COLOR_NAME";
+const COLOR_TEXT = "COLOR_TEXT";
