@@ -23,15 +23,16 @@ function handleOptionsSave(event) {
  * Function to restore detault colors.
  */
 function handleOptionsRestoreDefaultColors(event) {
-  let dotColors = DEFAULT_DOT_NAME_SCOLORS;
-  // Look for each predefined color (they are defined in shared.js).
-  for (var color in dotColors) {
-    let colorName = document.getElementById("color-" + color);
-    if (colorName) {
-      colorName.value = color;
+  if (confirm('Are you sure you\'d like to override current color names?')) {
+    let dotColors = DEFAULT_DOT_NAME_SCOLORS;
+    // Look for each predefined color (they are defined in shared.js).
+    for (var color in dotColors) {
+      let colorName = document.getElementById("color-" + color);
+      if (colorName) {
+        colorName.value = color;
+      }
     }
   }
-  return false;
 }
 
 /**
